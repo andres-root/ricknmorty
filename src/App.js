@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import Header from './components/Header';
+import Grid from './components/Grid';
+
 import './App.css';
 
 function App() {
+  const itemsList = [
+    {
+      name: 'Alan Rails',
+      status: 'Dead',
+      species: 'Human',
+      gender: 'Male',
+      origin: 'Uknown',
+      lastLocation: 'Worldender\'s lair',
+      avatar: 'alan-rails.jpeg',
+    },
+  ]
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header
+        title={'rick and morty'}
+        subtitle={'hey, did you ever want to hold a terry fold?'}
+      />
+      <Grid items={itemsList} />
     </div>
   );
 }
